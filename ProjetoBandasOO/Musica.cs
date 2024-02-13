@@ -1,17 +1,22 @@
 ﻿
 class Musica
 {
-    public string nome;
-    public string artista;
-    public int duracao;
+    public string Nome { get; set; }
+    public string Artista { get; set; }
+    public int Duracao { get; set; }
     public bool Disponivel { get; set; }
 
+    public string DescricaoResumida { get 
+        {
+            return $"A musica {Nome} pertence a banda {Artista}";
+                } 
+    }
 
     public void ExibirFichaTecnica()
     {
-        Console.WriteLine($"Nome da musica: {nome}");
-        Console.WriteLine($"Nome do artista: {artista}");
-        Console.WriteLine($"Duração da musica: {duracao}");
+        Console.WriteLine($"Nome da musica: {Nome}");
+        Console.WriteLine($"Nome do artista: {Artista}");
+        Console.WriteLine($"Duração da musica: {Duracao}");
         if (Disponivel)
         {
             Console.WriteLine("Disponivel no plano atual");
@@ -25,7 +30,7 @@ class Musica
 
     public void ExibirNomeEArtista()
     {
-        Console.WriteLine($"{artista} - {nome}");
+        Console.WriteLine($"{Artista} - {Nome}");
     }
 
 }
