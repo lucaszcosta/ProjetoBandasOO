@@ -16,3 +16,4 @@ musica1.Disponivel = false;
 
 musica1.ExibirFichaTecnica();
 musica2.ExibirFichaTecnica();
+
