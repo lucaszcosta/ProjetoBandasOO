@@ -21,5 +21,6 @@ class Album
         {
             Console.WriteLine($"Musica: {musica.Nome}");
         }
+        Console.WriteLine($"Duracao total do album: {DuracaoTotal}");
     }
 }
