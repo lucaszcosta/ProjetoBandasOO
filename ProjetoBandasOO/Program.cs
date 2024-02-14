@@ -1,5 +1,4 @@
 ﻿Album albumTeste = new Album();
-
 albumTeste.Nome = "Survival city";
 
 Musica musica1 = new Musica();
@@ -15,3 +14,5 @@ albumTeste.AdicionarMusica(musica1);
 albumTeste.AdicionarMusica(musica2);
 
 albumTeste.ExibirMusicasAlbum();
+
+
