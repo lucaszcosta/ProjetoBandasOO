@@ -9,8 +9,8 @@ class Album
 
 
     public string Nome { get; set; }
-    public int DuracaoTotal => musicas.Sum(m => m.Duracao);
-
+    //public int DuracaoTotal => musicas.Sum(m => m.Duracao);
+    public TimeSpan DuracaoTotal => TimeSpan.FromSeconds(musicas.Sum(m => m.Duracao));
 
     public void AdicionarMusica(Musica musica)
     {

@@ -1,11 +1,15 @@
 ﻿
 class Musica
 {
+
     public string Nome { get; set; }
     public string Artista { get; set; }
-    //public int Duracao { get; set; }
+    public int Duracao { get ; set; }
 
-    public TimeSpan Duracao { get; set; }
+    public TimeSpan duracaoSpan = new TimeSpan();
+
+
+
     /*
 TimeSpan teste = TimeSpan.FromSeconds(300);
     
@@ -13,7 +17,7 @@ string testeconvert = teste.ToString(@"hh\:mm\:ss");
 
 Console.WriteLine(testeconvert);*/
 
-    
+
     public bool Disponivel { get; set; }
 
     public Genero Genero { get; set; }
@@ -21,11 +25,15 @@ Console.WriteLine(testeconvert);*/
     public string DescricaoResumida =>
         $"A musica {Nome} pertence a banda {Artista}";
 
+
     public void ExibirFichaTecnica()
     {
+
+
         Console.WriteLine($"Nome da musica: {Nome}");
         Console.WriteLine($"Nome do artista: {Artista}");
-        Console.WriteLine($"Duração da musica: {Duracao}");
+        TimeSpan duracaoSpan = TimeSpan.FromSeconds(Duracao);
+        Console.WriteLine($"Duração da musica: {duracaoSpan}");
         if (Disponivel)
         {
             Console.WriteLine("Disponivel no plano atual");
