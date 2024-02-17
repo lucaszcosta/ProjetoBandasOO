@@ -8,4 +8,13 @@
     {
         albums.Add(album);
     }
+
+    public void ExibirDiscografia()
+    {
+        Console.WriteLine($"Discografia da banda {Nome}");
+        foreach (Album album in albums)
+        {
+            Console.WriteLine($"Album: {album.Nome} ({album.DuracaoTotal})");
+        }
+    }
 }

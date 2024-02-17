@@ -29,11 +29,13 @@ Musica musica2 = new Musica();
 musica2.Nome = "Disturbed";
 musica2.Duracao = 300;
 
-musica1.ExibirFichaTecnica();
 
 albumTeste.AdicionarMusica(musica1);
 albumTeste.AdicionarMusica(musica2);
 
-albumTeste.ExibirMusicasAlbum();
 
 
+Banda slipknot = new Banda();
+slipknot.Nome = "Slipknot";
+slipknot.AdicionarAlbum(albumTeste);
+slipknot.ExibirDiscografia();
