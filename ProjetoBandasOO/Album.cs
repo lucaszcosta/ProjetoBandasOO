@@ -1,13 +1,9 @@
-﻿
-
-using System.ComponentModel;
-
-class Album
+﻿class Album
 {
 
     public Album(string nome)
     {
-        Nome = Nome;
+        Nome = nome;
     }
 
     private List<Musica> musicas = new List<Musica>();
@@ -25,7 +21,7 @@ class Album
 
     public void ExibirMusicasAlbum()
     {
-        Console.WriteLine($"Lista de musicas do album {Nome}:\n");
+        Console.WriteLine($"\nLista de musicas do album {Nome}:\n");
         foreach (var musica in musicas)
         {
             Console.WriteLine($"Musica: {musica.Nome}");

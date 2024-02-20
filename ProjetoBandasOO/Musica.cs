@@ -10,8 +10,8 @@ class Musica
     }
 
     public string Nome { get; set; }
-    public Banda Artista { get;  }
-    public int Duracao { get ; set; }
+    public Banda Artista { get; }
+    public int Duracao { get; set; }
 
     public TimeSpan duracaoSpan = new TimeSpan();
 
@@ -38,7 +38,7 @@ Console.WriteLine(testeconvert);*/
 
 
         Console.WriteLine($"Nome da musica: {Nome}");
-        Console.WriteLine($"Nome do artista: {Artista}");
+        Console.WriteLine($"Nome do artista: {Artista.Nome}");
         TimeSpan duracaoSpan = TimeSpan.FromSeconds(Duracao);
         Console.WriteLine($"Duração da musica: {duracaoSpan}");
         if (Disponivel)

@@ -10,7 +10,7 @@
 
     private List<Album> albums = new List<Album>();
 
-    public string Nome { get;  }
+    public string Nome { get; }
 
     public void AdicionarAlbum(Album album)
     {
@@ -23,6 +23,8 @@
         foreach (Album album in albums)
         {
             Console.WriteLine($"Album: {album.Nome} ({album.DuracaoTotal})");
+            album.ExibirMusicasAlbum();
+
         }
     }
 }

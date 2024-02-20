@@ -39,8 +39,9 @@ Musica musica2 = new Musica(slipknot, "Disturbed")
 
 albumTeste.AdicionarMusica(musica1);
 albumTeste.AdicionarMusica(musica2);
-
-
-
 slipknot.AdicionarAlbum(albumTeste);
+
+
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
 slipknot.ExibirDiscografia();
