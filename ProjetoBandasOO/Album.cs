@@ -4,6 +4,12 @@ using System.ComponentModel;
 
 class Album
 {
+
+    public Album(string nome)
+    {
+        Nome = Nome;
+    }
+
     private List<Musica> musicas = new List<Musica>();
 
 

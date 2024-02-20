@@ -2,8 +2,15 @@
 class Musica
 {
 
+
+    public Musica(Banda artista, string nome)
+    {
+        Artista = artista;
+        Nome = nome;
+    }
+
     public string Nome { get; set; }
-    public string Artista { get; set; }
+    public Banda Artista { get;  }
     public int Duracao { get ; set; }
 
     public TimeSpan duracaoSpan = new TimeSpan();
@@ -43,11 +50,6 @@ Console.WriteLine(testeconvert);*/
             Console.WriteLine("Não disponivel no plano atual.\nAdquira o plano Plus+");
         }
 
-    }
-
-    public void ExibirNomeEArtista()
-    {
-        Console.WriteLine($"{Artista} - {Nome}");
     }
 
 }

@@ -16,18 +16,25 @@ Console.WriteLine(teste);*/
 
 
 
+Banda slipknot = new Banda("Slipknot");
 
 
-Album albumTeste = new Album();
-albumTeste.Nome = "Survival city";
 
-Musica musica1 = new Musica();
-musica1.Nome = "In the End";
-musica1.Duracao = 123;
+Album albumTeste = new Album("Survival city");
 
-Musica musica2 = new Musica();
-musica2.Nome = "Disturbed";
-musica2.Duracao = 300;
+
+Musica musica1 = new Musica(slipknot, "In the End")
+{
+    Disponivel = true,
+    Duracao = 300
+};
+
+
+Musica musica2 = new Musica(slipknot, "Disturbed")
+{
+    Duracao = 100,
+    Disponivel = false
+};
 
 
 albumTeste.AdicionarMusica(musica1);
@@ -35,7 +42,5 @@ albumTeste.AdicionarMusica(musica2);
 
 
 
-Banda slipknot = new Banda();
-slipknot.Nome = "Slipknot";
 slipknot.AdicionarAlbum(albumTeste);
 slipknot.ExibirDiscografia();
