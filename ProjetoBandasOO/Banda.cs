@@ -24,7 +24,6 @@
         {
             Console.WriteLine($"Album: {album.Nome} ({album.DuracaoTotal})");
             album.ExibirMusicasAlbum();
-
         }
     }
 }

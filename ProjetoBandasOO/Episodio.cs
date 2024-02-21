@@ -1,6 +1,16 @@
 ﻿class Episodio
 {
     private List<string> convidados = new ();
+    public TimeSpan duracaoSpan = new TimeSpan();
+
+
+    string ExibirDuracao()
+    {
+        TimeSpan duracaoSpan = TimeSpan.FromSeconds(Duracao);
+        return duracaoSpan.ToString();
+    }
+   
+
 
     public Episodio(int duracao, int ordem, string titulo)
     {
@@ -11,7 +21,7 @@
 
     public int Duracao { get;  }
     public int Ordem { get;  }
-    public string Resumo => $"{Ordem}. {Titulo} ({Duracao} min)";
+    public string Resumo => $"{Ordem}. {Titulo} ({ExibirDuracao} min)";
     public string Titulo { get; }
 
 
