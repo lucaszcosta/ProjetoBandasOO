@@ -15,7 +15,7 @@ Console.WriteLine(teste);*/
 
 
 
-
+/*
 Banda slipknot = new Banda("Slipknot");
 
 
@@ -45,3 +45,10 @@ slipknot.AdicionarAlbum(albumTeste);
 musica1.ExibirFichaTecnica();
 musica2.ExibirFichaTecnica();
 slipknot.ExibirDiscografia();
+*/
+
+
+
+
+
+
