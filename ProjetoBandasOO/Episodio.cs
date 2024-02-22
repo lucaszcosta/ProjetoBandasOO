@@ -1,31 +1,32 @@
-﻿class Episodio
+﻿using System.Runtime.Intrinsics.Arm;
+
+class Episodio
 {
     private List<string> convidados = new ();
-    public TimeSpan duracaoSpan = new TimeSpan();
 
 
-    string ExibirDuracao()
+    private string ExibirDuracao(int duracao)
     {
-        TimeSpan duracaoSpan = TimeSpan.FromSeconds(Duracao);
+        TimeSpan duracaoSpan = TimeSpan.FromMinutes(duracao);
         return duracaoSpan.ToString();
     }
    
 
 
-    public Episodio(int duracao, int ordem, string titulo)
+    public Episodio(int ordem, string titulo, int duracao)
     {
-        Duracao = duracao;
         Ordem = ordem;
         Titulo = titulo;
+        Duracao = duracao;
     }
 
     public int Duracao { get;  }
     public int Ordem { get;  }
-    public string Resumo => $"{Ordem}. {Titulo} ({ExibirDuracao} min)";
+    public string Resumo => $"{Ordem}. {Titulo} ({ExibirDuracao(Duracao)} min)";
     public string Titulo { get; }
 
 
-    void AdicionarConvidados(string convidado)
+    void AdicionarConvidado(string convidado)
     {
         convidados.Add(convidado);
     }

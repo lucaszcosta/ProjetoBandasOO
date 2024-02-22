@@ -1,31 +1,36 @@
 ﻿
 
+using System.Runtime.Intrinsics.Arm;
+
 class Podcast
 {
 
     private List<Episodio> episodios = new List<Episodio>();
 
-    public Podcast(string host, string nome, int totalEpisodios)
+    public Podcast(string host, string nome)
     {
         Host = host;
         Nome = nome;
-        TotalEpisodios = totalEpisodios;
     }
 
     public string Host { get; }
     public string Nome { get; }
-    public int TotalEpisodios { get; }
+    public int TotalEpisodios => episodios.Count;
 
 
-    void AdicionarEpisodio(Episodio episodio)
+    public void AdicionarEpisodio(Episodio episodio)
     {
         episodios.Add(episodio);
     }
 
 
-    void ExibirDetalhes()
+    public void ExibirDetalhes()
     {
-
+        Console.WriteLine($"O Host {Host} possui o Podcast: {Nome} com um total de {TotalEpisodios} episódios:");
+        foreach (Episodio episodio in episodios.OrderBy(e => e.Ordem))
+        {
+            Console.WriteLine(episodio.Resumo);
+        }
     }
 
 
